@@ -1,0 +1,6 @@
+[
+    {
+        "repository": "android_kernel_santos10",
+        "target_path": "kernel/samsung/santos10"
+    }
+]

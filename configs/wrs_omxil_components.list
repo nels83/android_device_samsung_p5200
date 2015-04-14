@@ -1,0 +1,7 @@
+libOMXVideoDecoderAVC.so
+libOMXVideoDecoderH263.so
+libOMXVideoDecoderMPEG4.so
+libOMXVideoDecoderWMV.so
+libOMXVideoEncoderAVC.so
+libOMXVideoEncoderH263.so
+libOMXVideoEncoderMPEG4.so
