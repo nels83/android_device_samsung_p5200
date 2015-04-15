@@ -40,8 +40,8 @@ PRODUCT_LOCALES += mdpi
 #?     panel.physicalWidthmm = 217 \
 #?     panel.physicalHeightmm = 136 \
 
-#? PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-#?     persist.sys.usb.config=mtp
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp
 
 # GPS
 PRODUCT_COPY_FILES += \
