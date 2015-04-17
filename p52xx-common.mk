@@ -28,6 +28,9 @@ PRODUCT_AAPT_CONFIG := large mdpi hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 PRODUCT_LOCALES += mdpi
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=160
+
 #? PRODUCT_PROPERTY_OVERRIDES += \
 #?     dalvik.vm.heapstartsize=8m \
 #?     dalvik.vm.heapgrowthlimit=96m \

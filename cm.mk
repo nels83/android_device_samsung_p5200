@@ -35,5 +35,5 @@ PRODUCT_NAME := cm_p5200
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=santos103gxx \
     TARGET_DEVICE=santos103g \
-    BUILD_FINGERPRINT="samsung/espresso10rfxx/espresso10rf:4.2.2/JDQ39/P5100XXDNA1:user/release-keys" \
-    PRIVATE_BUILD_DESC="espresso10rfxx-user 4.2.2 JDQ39 P5100XXDNA1 release-keys"
+    BUILD_FINGERPRINT="samsung/santos103gxx/santos103g:4.4.2/KOT49H/P5200XXUBOB1:user/release-keys" \
+    PRIVATE_BUILD_DESC="santos103gxx-user 4.4.2 KOT49H P5200XXUBOB1 release-keys"
