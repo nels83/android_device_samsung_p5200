@@ -54,6 +54,22 @@ BOARD_EGL_CFG := device/samsung/p5200/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
+ADDITIONAL_DEFAULT_PROPERTIES += \\
+    ro.opengles.version = 131072 \\
+    ro.hwui.text_large_cache_width = 2048 \\
+    ro.hwui.text_large_cache_height = 512 \\
+    ro.hwui.texture_cache_size = 24.0
+
+# OMX
+ENABLE_IMG_GRAPHICS := true
+INTEL_VA := true
+BUILD_WITH_FULL_STAGEFRIGHT := true
+BOARD_USES_WRS_OMXIL_CORE := true
+BOARD_USES_MRST_OMX := true
+ENABLE_MRFL_GRAPHICS := true
+# Used to copy headers needed by videoencoder
+INTEL_HWC_MOOREFIELD := true
+
 # Vold
 #? BOARD_VOLD_MAX_PARTITIONS := 12
 #? BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
@@ -86,6 +102,11 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/p5200/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/p5200/bluetooth/vnd_santos10.txt
+
+# Houdini
+TARGET_CPU_ABI2 := armeabi-v7a
+TARGET_CPU_ABI_LIST_32_BIT := x86 armeabi-v7a armeabi
+BUILD_ARM_FOR_X86 := true
 
 # Sensors
 #? BOARD_USE_LEGACY_SENSORS_FUSION := false

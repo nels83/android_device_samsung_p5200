@@ -1,0 +1,76 @@
+###### BINARIES ######
+
+# OpenGL
+system/vendor/bin/pvrsrvctl
+system/vendor/lib/libsrv_init.so
+system/vendor/lib/libsrv_um.so
+system/vendor/lib/libIMGegl.so
+system/vendor/lib/libglslcompiler.so
+system/vendor/lib/liboclcompiler.so
+system/vendor/lib/libpvrANDROID_WSEGL.so
+system/vendor/lib/libPVROCL.so
+system/vendor/lib/libusc.so
+system/vendor/lib/egl/libEGL_POWERVR_SGX544_115.so
+system/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX544_115.so
+system/vendor/lib/egl/libGLESv2_POWERVR_SGX544_115.so
+
+# gralloc
+system/vendor/lib/hw/gralloc.clovertrail.so
+system/lib/libcorkscrew.so
+system/vendor/lib/libpvr2d.so
+
+# hwcomposer
+system/lib/libsepdrm.so
+system/lib/libwsbm.so
+
+# misc
+system/lib/libmultidisplay.so
+system/lib/libmultidisplayjni.so
+
+# OMX
+system/lib/libmixvbp.so
+system/lib/libmixvbp_h264.so
+system/lib/libmixvbp_mpeg4.so
+system/lib/libmixvbp_vc1.so
+system/lib/pvr_drv_video.so
+
+# Sensors
+system/bin/geomagneticd
+system/bin/orientationd
+system/lib/hw/sensors.default.so
+
+# GPS/RIL
+system/bin/cpdd
+system/lib/libsecril-client.so
+
+# Camera
+system/lib/libia_aiq.so
+system/lib/libia_aiq_cp.so
+system/lib/libia_mkn.so
+system/lib/libia_nvm.so
+system/lib/libintelmetadatabuffer.so
+system/lib/libmfldadvci.so
+system/lib/libsecnativefeature.so
+system/lib/libtbd.so
+
+# Memtrack
+system/vendor/lib/hw/memtrack.clovertrail.so
+
+###### FIRMWARES ######
+
+# Wifi
+system/etc/wifi/bcmdhd_apsta.bin_b2
+system/etc/wifi/bcmdhd_sta.bin_b2
+system/etc/wifi/bcmdhd_p2p.bin_b2
+system/etc/wifi/nvram_net.txt
+
+# Bluetooth
+system/vendor/firmware/bcm4334.hcd
+system/vendor/firmware/bcm4334_murata.hcd
+system/vendor/firmware/bcm4334_semco.hcd
+
+# Camera
+system/etc/firmware/shisp_css15.bin
+system/etc/firmware/isp_fr.bin
+system/cameradata/datapattern_420sp.yuv
+system/cameradata/datapattern_front_420sp.yuv

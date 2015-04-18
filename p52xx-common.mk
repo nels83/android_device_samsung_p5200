@@ -68,6 +68,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_ffmpeg.xml:system/etc/media_codecs_ffmpeg.xml
 
+# Camera profiles
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/camera_profiles.xml:system/etc/camera_profiles.xml
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/usr/idc/sec_keyboard.idc:system/usr/idc/sec_keyboard.idc \
@@ -96,6 +100,31 @@ PRODUCT_PACKAGES += \
 # Samsung dock keyboard
 #? PRODUCT_PACKAGES += \
 #?     dock_kbd_attach
+
+# OMX
+PRODUCT_PACKAGES += \
+    libstagefrighthw \
+    \
+    libwrs_omxil_core_pvwrapped \
+    \
+    libOMXVideoDecoderAVC \
+    libOMXVideoDecoderH263 \
+    libOMXVideoDecoderMPEG4 \
+    libOMXVideoDecoderWMV \
+    libOMXVideoEncoderAVC \
+    libOMXVideoEncoderH263 \
+    libOMXVideoEncoderMPEG4
+
+# Houdini
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.dalvik.vm.native.bridge=libhoudini.so
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.dalvik.vm.isa.arm=x86 \
+    ro.enable.native.bridge.exec=1
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/init.houdini.rc:root/init.houdini.rc
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
