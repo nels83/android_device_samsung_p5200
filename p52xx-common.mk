@@ -31,13 +31,9 @@ PRODUCT_LOCALES += mdpi
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=160
 
-#? PRODUCT_PROPERTY_OVERRIDES += \
-#?     dalvik.vm.heapstartsize=8m \
-#?     dalvik.vm.heapgrowthlimit=96m \
-#?     dalvik.vm.heapsize=256m \
-#?     dalvik.vm.heaptargetutilization=0.75 \
-#?     dalvik.vm.heapminfree=512k \
-#?     dalvik.vm.heapmaxfree=2m
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapgrowthlimit=96m \
 
 #? PRODUCT_PROPERTY_OVERRIDES += \
 #?     panel.physicalWidthmm = 217 \
