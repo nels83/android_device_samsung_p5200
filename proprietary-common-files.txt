@@ -21,7 +21,6 @@ system/vendor/lib/libpvr2d.so
 
 # hwcomposer
 system/lib/libsepdrm.so
-system/lib/libwsbm.so
 
 # misc
 system/lib/libmultidisplay.so
@@ -48,7 +47,6 @@ system/lib/libia_aiq.so
 system/lib/libia_aiq_cp.so
 system/lib/libia_mkn.so
 system/lib/libia_nvm.so
-system/lib/libintelmetadatabuffer.so
 system/lib/libmfldadvci.so
 system/lib/libsecnativefeature.so
 system/lib/libtbd.so

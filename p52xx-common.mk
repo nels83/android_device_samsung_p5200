@@ -86,7 +86,8 @@ PRODUCT_PACKAGES += \
     camera.clovertrail \
     consumerir.clovertrail \
     lights.clovertrail \
-    power.clovertrail
+    power.clovertrail \
+    libwsbm
 
 ##    audio.primary.clovertrail \
 #?     libinvensense_mpl \
