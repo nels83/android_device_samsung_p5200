@@ -21,6 +21,8 @@ TARGET_NO_RADIOIMAGE := true
 
 TARGET_BOARD_PLATFORM := clovertrail
 
+TARGET_BOARD_KERNEL_HEADERS := device/samsung/p5200/kernel-headers
+
 TARGET_ARCH := x86
 TARGET_ARCH_VARIANT := x86-atom
 TARGET_CPU_ABI := x86
