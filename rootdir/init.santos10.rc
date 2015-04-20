@@ -324,11 +324,6 @@ service fuse_usbdisk0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdis
     class late_start
     disabled
 
-service battery_charger /charger
-    class charger
-    critical
-    seclabel u:r:healthd:s0
-
 # interval:60s margin:20s
 service watchdogd /sbin/watchdogd 60 20
     class core
@@ -366,10 +361,24 @@ service gpsd /system/bin/gpsd -c /system/etc/gps.xml
     ioprio be 0
     seclabel u:r:object_r:gpsd:s0
 
-on charger
+# LPM
+on property:ro.bootmode=charger
+    mount ext4 /dev/block/pci/pci0000:00/0000:00:01.0/by-name/SYSTEM /system wait ro
+
+    # IMG Graphics
     chown system system /dev/dri/card0
     chmod 0666 /dev/dri/card0
     symlink /dev/dri/card0 /dev/card0
+
+    # Insert GPU Driver
+    insmod /system/lib/modules/pnwdisp.ko
+
+    # Insert FB driver
+    insmod /system/lib/modules/videobuf-core.ko
+    insmod /system/lib/modules/videobuf-vmalloc.ko
+
+    # Insert GPU driver
+    insmod /system/lib/modules/pvrsgx.ko
 
     start pvrsrvctl
 
@@ -379,5 +388,9 @@ on charger
     #default setting to enable charging in COS
     setprop sys.usb.config charging
 
-    setprop ro.boot.min.cap 3
-    start watchdogd
+    class_start charger
+
+service charger /sbin/healthd -c
+    class charger
+    critical
+    seclabel u:r:healthd:s0
