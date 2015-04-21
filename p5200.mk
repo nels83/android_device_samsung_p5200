@@ -28,9 +28,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.santos10:root/fstab.santos103g
 
 # Audio
-#? PRODUCT_COPY_FILES += \
-#?     $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/santos103g \
-#?     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/santos103g
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \

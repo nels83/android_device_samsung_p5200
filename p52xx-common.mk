@@ -80,6 +80,10 @@ PRODUCT_COPY_FILES += \
     \
     $(LOCAL_PATH)/configs/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
 
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+
 # Packages
 PRODUCT_PACKAGES += \
     audio.primary.clovertrail \
