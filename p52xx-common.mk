@@ -82,14 +82,16 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES += \
+    audio.primary.clovertrail \
     audio.r_submix.default \
+    audio.a2dp.default \
+    audio.usb.default \
     camera.clovertrail \
     consumerir.clovertrail \
     lights.clovertrail \
     power.clovertrail \
     libwsbm
 
-##    audio.primary.clovertrail \
 #?     libinvensense_mpl \
 ##    hwcomposer.clovertrail \
 
