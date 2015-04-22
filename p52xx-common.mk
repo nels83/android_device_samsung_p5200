@@ -46,6 +46,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
+PRODUCT_PACKAGES += \
+    libsecril-client
+
 # Wifi
 PRODUCT_PACKAGES += \
     libwpa_client \

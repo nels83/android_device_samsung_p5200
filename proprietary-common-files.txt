@@ -40,7 +40,6 @@ system/lib/hw/sensors.default.so
 
 # GPS/RIL
 system/bin/cpdd
-system/lib/libsecril-client.so
 
 # Camera
 system/lib/libia_aiq.so
