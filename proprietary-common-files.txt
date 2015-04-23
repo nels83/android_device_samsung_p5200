@@ -1,7 +1,6 @@
 ###### BINARIES ######
 
 # OpenGL
-system/vendor/bin/pvrsrvctl
 system/vendor/lib/libsrv_init.so
 system/vendor/lib/libsrv_um.so
 system/vendor/lib/libIMGegl.so
