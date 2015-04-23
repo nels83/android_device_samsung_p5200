@@ -15,7 +15,6 @@ system/vendor/lib/egl/libGLESv2_POWERVR_SGX544_115.so
 
 # gralloc
 system/vendor/lib/hw/gralloc.clovertrail.so
-system/lib/libcorkscrew.so
 system/vendor/lib/libpvr2d.so
 
 # hwcomposer
