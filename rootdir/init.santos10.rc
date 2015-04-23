@@ -33,7 +33,7 @@ on fs
     mkdir /logs 0770 system log
     mkdir /efs 0775 radio system
 
-    mount_all /fstab.santos10wifi
+    mount_all /fstab.santos10
     setprop ro.crypto.fuse_sdcard true
 
 on boot
