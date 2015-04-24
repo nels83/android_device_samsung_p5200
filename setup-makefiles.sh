@@ -78,7 +78,10 @@ for FILE in `cat proprietary-$DEVICE-files.txt | grep -v ^# | grep -v ^$`; do
     if [ $COUNT = "0" ]; then
         LINEEND=""
     fi
+    # Special case of vendor camera
     FILEOUT=`echo $FILE | sed 's/camera\./camera\.vendor\./'`
+    # Special case of ramdisk files
+    FILEOUT=`echo $FILE | sed -e 's/^sbin\//root\/sbin\//'`
     echo "    $OUTDIR/$DEVICE/$FILE:$FILEOUT$LINEEND" >> $DEVICEMAKEFILE
 done
 

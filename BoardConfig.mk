@@ -25,5 +25,11 @@ TARGET_BOARD_INFO_FILE := device/samsung/p5200/board-info.txt
 TARGET_KERNEL_SOURCE := kernel/samsung/santos10
 TARGET_KERNEL_CONFIG := cyanogenmod_p5200_defconfig
 
+# RIL
+BOARD_PROVIDES_LIBRIL := true
+BOARD_MODEM_TYPE := xmm6262
+BOARD_RIL_CLASS := ../../../device/samsung/p5200/ril
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/p5200/include
+
 # assert
 TARGET_OTA_ASSERT_DEVICE := p5200,GT-P5200,santos103g,santos103gxx
