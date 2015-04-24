@@ -59,10 +59,10 @@ BOARD_EGL_CFG := device/samsung/p5200/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
-ADDITIONAL_DEFAULT_PROPERTIES += \\
-    ro.opengles.version = 131072 \\
-    ro.hwui.text_large_cache_width = 2048 \\
-    ro.hwui.text_large_cache_height = 512 \\
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.opengles.version = 131072 \
+    ro.hwui.text_large_cache_width = 2048 \
+    ro.hwui.text_large_cache_height = 512 \
     ro.hwui.texture_cache_size = 24.0
 
 # OMX

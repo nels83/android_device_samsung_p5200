@@ -36,9 +36,6 @@ system/bin/geomagneticd
 system/bin/orientationd
 system/lib/hw/sensors.default.so
 
-# GPS/RIL
-system/bin/cpdd
-
 # Camera
 system/lib/libia_aiq.so
 system/lib/libia_aiq_cp.so
