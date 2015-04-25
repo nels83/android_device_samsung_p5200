@@ -390,12 +390,6 @@ on property:ro.bootmode=charger
 
     start pvrsrvctl
 
-    # reduce backlight
-    write /sys/class/backlight/panel/brightness 100
-
-    #default setting to enable charging in COS
-    setprop sys.usb.config charging
-
     class_start charger
 
 service charger /sbin/healthd -c
