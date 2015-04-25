@@ -1,1 +1,2 @@
-require board=santos10
+require board=santos103g
+require version-bootloader=P5200XXUBOB1
