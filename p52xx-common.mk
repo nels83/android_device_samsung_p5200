@@ -134,7 +134,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.dalvik.vm.isa.arm=x86 \
     ro.enable.native.bridge.exec=1
 
+# Init files
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/fstab.santos10:root/fstab.santos10 \
+    $(LOCAL_PATH)/rootdir/init.santos10.usb.rc:root/init.santos10.usb.rc \
     $(LOCAL_PATH)/rootdir/init.houdini.rc:root/init.houdini.rc
 
 # These are the hardware-specific features

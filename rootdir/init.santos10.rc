@@ -1,5 +1,5 @@
-import init.santos10wifi.usb.rc
-import init.santos10wifi.diag.rc
+import init.santos10.usb.rc
+import init.santos10.diag.rc
 import init.houdini.rc
 
 on early-init
@@ -116,18 +116,18 @@ on post-fs-data
     chmod 0666 /dev/dri/card0
     symlink /dev/dri/card0 /dev/card0
 
-    # Insert GPU Driver
+    # Insert GPU drivers
     insmod /system/lib/modules/pnwdisp.ko
+    insmod /system/lib/modules/pvrsgx.ko
 
-    # Insert FB driver
+    # Insert HDMI driver
+    insmod /system/lib/modules/hdmi_audio.ko
+
+    # Insert V4L drivers
     insmod /system/lib/modules/videobuf-core.ko
     insmod /system/lib/modules/videobuf-vmalloc.ko
 
-    # Insert GPU driver
-    insmod /system/lib/modules/pvrsgx.ko
-    insmod /system/lib/modules/hdmi_audio.ko
-
-    # Defer loading modules that may require firmware till fs is ready
+    # Insert Camera drivers
     insmod /system/lib/modules/s5k5ccgx.ko
     insmod /system/lib/modules/db8131m.ko
     insmod /system/lib/modules/atomisp.ko
@@ -378,14 +378,8 @@ on property:ro.bootmode=charger
     chmod 0666 /dev/dri/card0
     symlink /dev/dri/card0 /dev/card0
 
-    # Insert GPU Driver
+    # Insert GPU drivers
     insmod /system/lib/modules/pnwdisp.ko
-
-    # Insert FB driver
-    insmod /system/lib/modules/videobuf-core.ko
-    insmod /system/lib/modules/videobuf-vmalloc.ko
-
-    # Insert GPU driver
     insmod /system/lib/modules/pvrsgx.ko
 
     start pvrsrvctl
