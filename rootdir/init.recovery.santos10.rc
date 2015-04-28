@@ -1,0 +1,3 @@
+on init
+    # Insert GPU drivers
+    insmod /lib/modules/pnwdisp.ko

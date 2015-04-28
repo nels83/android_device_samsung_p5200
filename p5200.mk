@@ -24,7 +24,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.santos10.rc:root/init.santos103g.rc \
     $(LOCAL_PATH)/rootdir/ueventd.santos10.rc:root/ueventd.santos103g.rc \
-    $(LOCAL_PATH)/rootdir/fstab.santos10:root/fstab.santos103g
+    $(LOCAL_PATH)/rootdir/fstab.santos10:root/fstab.santos103g \
+    $(LOCAL_PATH)/rootdir/init.recovery.santos10.rc:root/init.recovery.santos103g.rc
 
 # Audio
 PRODUCT_COPY_FILES += \

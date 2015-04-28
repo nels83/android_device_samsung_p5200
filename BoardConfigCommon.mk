@@ -139,17 +139,21 @@ BUILD_ARM_FOR_X86 := true
 ##    wpa_supplicant.te
 
 # Recovery
-#? TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-#? BOARD_UMS_LUNFILE := "/sys/class/android_usb/f_mass_storage/lun0/file"
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+BOARD_UMS_LUNFILE := "/sys/class/android_usb/f_mass_storage/lun/file"
 #? BOARD_USES_MMCUTILS := true
 #? BOARD_HAS_NO_MISC_PARTITION := true
 #? BOARD_HAS_NO_SELECT_BUTTON := true
 #? BOARD_SUPPRESS_EMMC_WIPE := true
-TARGET_RECOVERY_FSTAB := device/samsung/p5200/rootdir/recovery.fstab
-#? RECOVERY_FSTAB_VERSION := 2
+TARGET_RECOVERY_FSTAB := device/samsung/p5200/rootdir/fstab.santos10
 
-# build swipe recovery by default
-#? BOARD_RECOVERY_SWIPE := true
+# TWRP
+DEVICE_RESOLUTION := 1280x800
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_INCLUDE_CRYPTO := true
 
 # Charging mode
 BACKLIGHT_PATH := /sys/class/backlight/panel/brightness
