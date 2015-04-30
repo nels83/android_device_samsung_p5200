@@ -100,6 +100,7 @@ PRODUCT_PACKAGES += \
     consumerir.clovertrail \
     lights.clovertrail \
     power.clovertrail \
+    sensors.clovertrail \
     libwsbm
 
 #?     libinvensense_mpl \

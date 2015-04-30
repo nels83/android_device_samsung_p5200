@@ -33,7 +33,6 @@ system/lib/libmixvbp_vc1.so
 # Sensors
 system/bin/geomagneticd
 system/bin/orientationd
-system/lib/hw/sensors.default.so
 
 # Camera
 system/lib/libia_aiq.so
