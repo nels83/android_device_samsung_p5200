@@ -121,10 +121,15 @@ int LightSensor::readEvents(sensors_event_t* data, int count)
     while (count && mInputReader.readEvent(&event)) {
         int type = event->type;
         if (type == EV_REL) {
-                if(event->value < 0)
-		   mPendingEvent.light = 0;
-		else
-                   mPendingEvent.light = event->value;
+                if (event->code == REL_MISC) {
+                    if(event->value < 0)
+                        mPendingEvent.light = 0;
+                    else
+                        mPendingEvent.light = event->value;
+                } else if (event->code == REL_HWHEEL) {
+                    int gain = event->value >> 16;
+                    mPendingEvent.light = mPendingEvent.light / (gain / 2);
+                }
         } else if (type == EV_SYN) {
             mPendingEvent.timestamp = timevalToNano(event->time);
             if (mEnabled) {
