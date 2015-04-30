@@ -34,7 +34,6 @@
 #include "sensors.h"
 
 #include "LightSensor.h"
-#include "ProximitySensor.h"
 //#include "BoschYamaha.h"
 #include "AccelSensor.h"
 #include "CompassSensor.h"
@@ -70,7 +69,7 @@
 /* The SENSORS Module */
 static const struct sensor_t sSensorList[] = {
 
-        { "LIS3DH Acceleration Sensor",
+        { "K2DH Acceleration Sensor",
           "STMicroelectronics",
           1, SENSORS_ACCELERATION_HANDLE,
           SENSOR_TYPE_ACCELEROMETER, RANGE_A, RESOLUTION_A, 0.20f, 10000, 0, 0,
@@ -85,24 +84,11 @@ static const struct sensor_t sSensorList[] = {
           1, SENSORS_ORIENTATION_HANDLE,
           SENSOR_TYPE_ORIENTATION,  360.0f, CONVERT_O, 7.8f, 10000, 0, 0,
           SENSOR_STRING_TYPE_ORIENTATION, "", 0, SENSOR_FLAG_CONTINUOUS_MODE, { } },
-#ifndef ALS3201_SENSOR
-	{ "GP2AP030 Light sensor",
-          "Sharp",
+        { "BH1733 Light Sensor",
+          "ROHM",
           1, SENSORS_LIGHT_HANDLE,
           SENSOR_TYPE_LIGHT, 10240.0f, 1.0f, 0.75f, 0, 0, 0,
           SENSOR_STRING_TYPE_LIGHT, "", 0, SENSOR_FLAG_CONTINUOUS_MODE, { } },
-        { "GP2AP030 Proximity sensor",
-          "Sharp",
-          1, SENSORS_PROXIMITY_HANDLE,
-          SENSOR_TYPE_PROXIMITY, 5.0f, 1.0f, 0.75f, 0, 0, 0,
-          SENSOR_STRING_TYPE_PROXIMITY, "", 0, SENSOR_FLAG_WAKE_UP, { } },
-#else
-        { "AL3201 Light Sensor",
-          "LITEON",
-          1, SENSORS_LIGHT_HANDLE,
-          SENSOR_TYPE_LIGHT, 10240.0f, 1.0f, 0.75f, 0, 0, 0,
-          SENSOR_STRING_TYPE_LIGHT, "", 0, SENSOR_FLAG_CONTINUOUS_MODE, { } },
-#endif
 };
 
 
@@ -146,10 +132,9 @@ struct sensors_poll_context_t {
 private:
     enum {
         light           = 0,
-        proximity       = 1,
-        bosch           = 2,
-        yamaha          = 3,
-	orientation 	= 4,
+        bosch           = 1,
+        yamaha          = 2,
+	orientation 	= 3,
 	numSensorDrivers,
         numFds,
     };
@@ -176,8 +161,6 @@ private:
             	return yamaha;
 	    case ID_O:
 		return orientation;
-	    case ID_P:
-                return proximity;
             case ID_L:
                 return light;
                  
@@ -194,11 +177,6 @@ sensors_poll_context_t::sensors_poll_context_t()
     mPollFds[light].fd = mSensors[light]->getFd();
     mPollFds[light].events = POLLIN;
     mPollFds[light].revents = 0;
-
-    mSensors[proximity] = new ProximitySensor();
-    mPollFds[proximity].fd = mSensors[proximity]->getFd();
-    mPollFds[proximity].events = POLLIN;
-    mPollFds[proximity].revents = 0;
 
     mSensors[bosch] = new AccelSensor();
     mPollFds[bosch].fd = mSensors[bosch]->getFd();
