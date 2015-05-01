@@ -92,15 +92,15 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-    audio.primary.clovertrail \
+    audio.primary.santos10 \
     audio.r_submix.default \
     audio.a2dp.default \
     audio.usb.default \
-    camera.clovertrail \
-    consumerir.clovertrail \
-    lights.clovertrail \
+    camera.santos10 \
+    consumerir.santos10 \
+    lights.santos10 \
     power.clovertrail \
-    sensors.clovertrail \
+    sensors.santos10 \
     libwsbm
 
 #?     libinvensense_mpl \
