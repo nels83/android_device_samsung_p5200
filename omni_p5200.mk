@@ -14,24 +14,26 @@
 # limitations under the License.
 #
 
-# Release name
-PRODUCT_RELEASE_NAME := p5200
+# Inherit Omni GSM telephony parts
+$(call inherit-product, vendor/omni/config/gsm.mk)
 
-# Boot animation
-# TARGET_SCREEN_HEIGHT := 800
-TARGET_SCREEN_HEIGHT := 480
-TARGET_SCREEN_WIDTH := 1280
+# Inherit common Omni configurations
+$(call inherit-product, vendor/omni/config/common_tablet.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/p5200/full_p5200.mk)
+$(call inherit-product, device/samsung/p5200/device.mk)
 
-## Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_p5200
+# Device identifier. This must come after all inclusions
+PRODUCT_MODEL := GT-P5200
+PRODUCT_BRAND := samsung
+PRODUCT_NAME := omni_p5200
+PRODUCT_DEVICE := p5200
+PRODUCT_MANUFACTURER := samsung
 
-#Set build fingerprint / ID / Prduct Name ect.
+# Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=santos103gxx \
     TARGET_DEVICE=santos103g \

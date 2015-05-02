@@ -1,0 +1,14 @@
+[
+  {
+    "remote": "omnirom",
+    "repository": "android_hardware_samsung",
+    "target_path": "hardware/samsung",
+    "revision": "android-5.1"
+  },
+  {
+    "remote": "github",
+    "repository": "nels83/android_kernel_santos10",
+    "target_path": "kernel/samsung/santos10",
+    "revision": "cm-12.1"
+  }
+]
