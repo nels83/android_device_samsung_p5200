@@ -80,6 +80,7 @@ Only the three quirks included above are recognized at this point:
 
 <MediaCodecs>
     <Include href="media_codecs_google_audio.xml" />
+    <Include href="media_codecs_google_telephony.xml" />
 
     <Decoders>
         <MediaCodec name="OMX.Intel.VideoDecoder.AVC" type="video/avc">
@@ -120,4 +121,5 @@ Only the three quirks included above are recognized at this point:
     </Encoders>
 
     <Include href="media_codecs_google_video.xml" />
+    <Include href="media_codecs_ffmpeg.xml" />
 </MediaCodecs>
