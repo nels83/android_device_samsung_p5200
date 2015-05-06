@@ -163,5 +163,8 @@ BACKLIGHT_PATH := /sys/class/backlight/panel/brightness
 # Override healthd HAL
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.santos10
 
+# Include an expanded selection of fonts
+EXTENDED_FONT_FOOTPRINT := true
+
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/p52xx/BoardConfigVendor.mk
