@@ -21,9 +21,6 @@
      for different hardware and product builds. -->
 <resources>
 
-    <!-- The default iface on which to monitor data use -->
-    <string name="config_datause_iface">pdp0</string>
-
     <!-- XXXXX NOTE THE FOLLOWING RESOURCES USE THE WRONG NAMING CONVENTION.
          Please don't copy them, copy anything else. -->
 
