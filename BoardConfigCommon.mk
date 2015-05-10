@@ -84,7 +84,6 @@ INTEL_HWC_MOOREFIELD := true
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
-#? BOARD_WLAN_DEVICE_REV            := bcm4330_b1
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
@@ -98,10 +97,7 @@ WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/wifi/bcmdhd_p2p.bin"
 WIFI_DRIVER_MODULE_NAME          := "dhd"
 WIFI_DRIVER_MODULE_ARG           := "firmware_path=/system/etc/wifi/bcmdhd_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
 WIFI_DRIVER_MODULE_AP_ARG        := "firmware_path=/system/etc/wifi/bcmdhd_apsta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
-#? WIFI_BAND                        := 802_11_ABG
 BOARD_HAVE_SAMSUNG_WIFI          := true
-#? BOARD_NO_APSME_ATTR              := true
-#? BOARD_NO_WIFI_HAL                := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
