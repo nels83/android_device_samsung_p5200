@@ -67,3 +67,6 @@ system/cameradata/datapattern_front_420sp.yuv
 
 # Audio
 system/etc/firmware/fw_sst_08e7.bin
+
+# Video
+system/etc/firmware/topazsc_fw.bin
