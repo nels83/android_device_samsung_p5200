@@ -72,9 +72,6 @@ INTEL_VA := true
 BUILD_WITH_FULL_STAGEFRIGHT := true
 BOARD_USES_WRS_OMXIL_CORE := true
 BOARD_USES_MRST_OMX := true
-ENABLE_MRFL_GRAPHICS := true
-# Used to copy headers needed by videoencoder
-INTEL_HWC_MOOREFIELD := true
 
 # Vold
 #? BOARD_VOLD_MAX_PARTITIONS := 12
