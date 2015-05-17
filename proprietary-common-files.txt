@@ -29,6 +29,7 @@ system/lib/libmixvbp.so
 system/lib/libmixvbp_h264.so
 system/lib/libmixvbp_mpeg4.so
 system/lib/libmixvbp_vc1.so
+system/lib/pvr_drv_video.so
 
 # Sensors
 system/bin/geomagneticd

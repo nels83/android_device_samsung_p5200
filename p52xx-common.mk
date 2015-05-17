@@ -49,8 +49,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     pvrsrvctl \
     libcorkscrew \
-    libsecril-client \
-    pvr_drv_video
+    libsecril-client
 
 # Wifi
 PRODUCT_PACKAGES += \
