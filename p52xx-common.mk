@@ -129,7 +129,12 @@ PRODUCT_PACKAGES += \
     libOMXVideoDecoderWMV \
     libOMXVideoEncoderAVC \
     libOMXVideoEncoderH263 \
-    libOMXVideoEncoderMPEG4
+    libOMXVideoEncoderMPEG4 \
+    \
+    libmixvbp \
+    libmixvbp_h264 \
+    libmixvbp_mpeg4 \
+    libmixvbp_vc1
 
 # Houdini
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
