@@ -29,11 +29,17 @@ on init
     symlink /storage/usbdisk0 /usbdisk0
     symlink /storage/usbdisk0 /mnt/usbdisk0
 
+    # KSM options
+    write /sys/kernel/mm/ksm/pages_to_scan 100
+    write /sys/kernel/mm/ksm/sleep_millisecs 500
+    write /sys/kernel/mm/ksm/run 1
+
 on fs
     mkdir /logs 0770 system log
     mkdir /efs 0775 radio system
 
     mount_all /fstab.santos10
+    swapon_all /fstab.santos10
     setprop ro.crypto.fuse_sdcard true
 
 on boot
