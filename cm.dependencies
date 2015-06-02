@@ -4,7 +4,7 @@
         "target_path": "hardware/samsung"
     },
     {
-        "repository": "android_kernel_santos10",
+        "repository": "android_kernel_samsung_santos10",
         "target_path": "kernel/samsung/santos10"
     }
 ]
