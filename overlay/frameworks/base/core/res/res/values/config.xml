@@ -75,6 +75,6 @@
     </integer-array>
 
     <!-- Is the device LTE capable -->
-    <bool name="config_lte_capable">true</bool>
+    <bool name="config_lte_capable">false</bool>
 
 </resources>
