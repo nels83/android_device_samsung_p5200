@@ -148,8 +148,6 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_INCLUDE_CRYPTO := true
-TW_NO_SCREEN_BLANK := true
-TW_NO_SCREEN_TIMEOUT := true
 
 # Charging mode
 BACKLIGHT_PATH := /sys/class/backlight/panel/brightness
