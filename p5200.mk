@@ -33,6 +33,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SamsungOmap4RIL \
     mobiledata.interfaces=pdp0,wlan0,gprs,ppp0
 
+PRODUCT_PACKAGES += \
+    libsecril-client-sap \
+    SamsungServiceMode
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
