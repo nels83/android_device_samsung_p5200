@@ -35,7 +35,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGES += \
     libsecril-client-sap \
-    SamsungServiceMode
+    SamsungServiceMode \
+    Stk
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
