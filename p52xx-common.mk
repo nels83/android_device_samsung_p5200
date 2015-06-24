@@ -35,6 +35,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=8m \
     dalvik.vm.heapgrowthlimit=96m \
 
+# Storage
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.isUsbOtgEnabled=true
+
 #? PRODUCT_PROPERTY_OVERRIDES += \
 #?     panel.physicalWidthmm = 217 \
 #?     panel.physicalHeightmm = 136 \
