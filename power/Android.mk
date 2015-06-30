@@ -12,11 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq ($(INTEL_POWER_HAL_INTERACTIVE_GOV),true)
+
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := power.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE := power.$(TARGET_PRODUCT)
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
 ifeq ($(TARGET_BOARD_PLATFORM), clovertrail)
@@ -37,3 +39,5 @@ LOCAL_SHARED_LIBRARIES := liblog
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif
