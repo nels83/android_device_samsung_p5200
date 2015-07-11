@@ -18,4 +18,7 @@
 -->
 <resources>
     <bool name="def_screen_brightness_automatic_mode">true</bool>
+
+    <!-- Default for Settings.System.SWAP_VOLUME_KEYS_ON_ROTATION -->
+    <bool name="def_swap_volume_keys_on_rotation">true</bool>
 </resources>
