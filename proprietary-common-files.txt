@@ -24,9 +24,6 @@ system/lib/libsepdrm.so
 system/lib/libmultidisplay.so
 system/lib/libmultidisplayjni.so
 
-# OMX
-system/lib/pvr_drv_video.so
-
 # Sensors
 system/bin/geomagneticd
 system/bin/orientationd
