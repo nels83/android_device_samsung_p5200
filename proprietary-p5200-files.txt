@@ -6,6 +6,7 @@ system/lib/hw/hwcomposer.santos103g.so
 # GPS
 system/bin/gpsd
 system/lib/hw/gps.default.so
+system/lib/libwrappergps.so
 
 # Camera
 system/lib/hw/camera.santos103g.so
