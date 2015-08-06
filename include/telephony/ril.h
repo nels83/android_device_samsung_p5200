@@ -4404,6 +4404,11 @@ typedef struct {
 #define RIL_REQUEST_SET_LTE_BAND_MODE 10059
 #define RIL_REQUEST_QUERY_LOCK_NETWORKS 10060
 
+#define RIL_REQUEST_READ_SMS_FROM_SIM 10012
+#define RIL_REQUEST_GET_STOREAD_MSG_COUNT 10017
+#define RIL_REQUEST_SIM_TRANSMIT_BASIC 10026
+#define RIL_REQUEST_SIM_TRANSMIT_CHANNEL 10029
+#define RIL_REQUEST_SIM_AUTH 10030
 
 /***********************************************************************/
 
@@ -5036,6 +5041,10 @@ typedef struct {
 #define RIL_UNSOL_UTS_GET_UNREAD_SMS_STATUS 11051
 #define RIL_UNSOL_MIP_CONNECT_STATUS 11052
 #define RIL_UNSOL_STK_CALL_STATUS 11053
+
+#define RIL_UNSOL_SIM_SMS_STORAGE_AVAILALE 11015
+#define RIL_UNSOL_IPV6_ADDR 11022
+#define RIL_UNSOL_NWK_INIT_DISC_REQUEST 11023
 
 /***********************************************************************/
 
