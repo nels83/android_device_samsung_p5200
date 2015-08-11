@@ -107,6 +107,9 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/p5200/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/p5200/bluetooth/vnd_santos10.txt
 
+# CMHW
+BOARD_HARDWARE_CLASS += device/samsung/p5200/cmhw
+
 # Houdini
 TARGET_CPU_ABI2 := armeabi-v7a
 TARGET_CPU_ABI_LIST_32_BIT := x86 armeabi-v7a armeabi
