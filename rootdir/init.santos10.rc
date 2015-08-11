@@ -199,12 +199,13 @@ on post-fs-data
 
 # Permissions for backlight and lcd
     chown system system /sys/class/sec/sec_touchkey/brightness
+    chown system system /sys/class/sec/sec_touchkey/keypad_enable
     chown system radio /sys/class/lcd/panel/lcd_type
 
 # Permissions for IrLED
     chown system system /sys/class/sec/sec_ir/ir_send
     chown system system /sys/class/sec/sec_ir/ir_send_result
-    chown system system /sys/class/sec/sec_ir/check_ir
+    chown system system /sys/class/sec/sys/class/sec/sec_ir/check_ir
 
     # DRI
     chmod 0600 /dev/dri/controlD64
