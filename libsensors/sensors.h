@@ -81,10 +81,10 @@ __BEGIN_DECLS
 #define EVENT_TYPE_ACCEL_X          ABS_X
 #define EVENT_TYPE_ACCEL_Y          ABS_Y
 #define EVENT_TYPE_ACCEL_Z          ABS_Z
-#define LSG                         (1000.0f)
+#define LSG                         (1024.0f)
 
 // conversion of acceleration data to SI units (m/s^2)
-#define RANGE_A                     (4*GRAVITY_EARTH)
+#define RANGE_A                     (2*GRAVITY_EARTH)
 #define RESOLUTION_A                (GRAVITY_EARTH / LSG)
 #define CONVERT_A                   (GRAVITY_EARTH / LSG)
 #define CONVERT_A_X                 (CONVERT_A)
