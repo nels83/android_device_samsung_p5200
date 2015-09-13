@@ -16,6 +16,8 @@
 
 package org.cyanogenmod.hardware;
 
+import android.util.Log;
+
 import java.io.File;
 
 import org.cyanogenmod.hardware.util.FileUtils;
@@ -26,7 +28,9 @@ import org.cyanogenmod.hardware.util.FileUtils;
  */
 public class AdaptiveBacklight {
 
-    private static String CABC_PATH = "/sys/devices/virtual/mdnie/mdnie/cabc";
+    private static final String TAG = "AdaptiveBacklight";
+
+    private static final String FILE_CABC = "/sys/devices/virtual/mdnie/mdnie/cabc";
 
     /**
      * Whether device supports an adaptive backlight technology.
@@ -34,8 +38,7 @@ public class AdaptiveBacklight {
      * @return boolean Supported devices must return always true
      */
     public static boolean isSupported() {
-        File f = new File(CABC_PATH);
-        return f.isFile();
+        return new File(FILE_CABC).exists();
     }
 
     /**
@@ -45,7 +48,12 @@ public class AdaptiveBacklight {
      * the operation failed while reading the status; true in any other case.
      */
     public static boolean isEnabled() {
-        return (Integer.parseInt(FileUtils.readOneLine(CABC_PATH)) == 1);
+        try {
+            return Integer.parseInt(FileUtils.readOneLine(FILE_CABC)) == 1;
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage(), e);
+        }
+        return false;
     }
 
     /**
@@ -56,7 +64,7 @@ public class AdaptiveBacklight {
      * failed; true in any other case.
      */
     public static boolean setEnabled(boolean status) {
-        return FileUtils.writeLine(CABC_PATH, String.valueOf(status ? 1 : 0));
+        return FileUtils.writeLine(FILE_CABC, status ? "1" : "0");
     }
 
 }
