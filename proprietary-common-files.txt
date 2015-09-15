@@ -40,6 +40,10 @@ system/lib/libtbd.so
 # Memtrack
 system/vendor/lib/hw/memtrack.clovertrail.so
 
+# Keystore
+system/lib/hw/keystore.clovertrail.so
+system/lib/libsepkeymaster.so
+
 ###### FIRMWARES ######
 
 # Wifi
