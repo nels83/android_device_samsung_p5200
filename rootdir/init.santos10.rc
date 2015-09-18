@@ -35,6 +35,9 @@ on init
     symlink /storage/usbdisk0 /usbdisk0
     symlink /storage/usbdisk0 /mnt/usbdisk0
 
+    # Support stock path
+    symlink /storage/sdcard1 /storage/extSdCard
+
 on fs
     mkdir /logs 0770 system log
     mkdir /efs 0775 radio system
