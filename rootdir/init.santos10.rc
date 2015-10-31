@@ -47,6 +47,9 @@ on fs
     setprop ro.crypto.fuse_sdcard true
 
 on boot
+    # Symlink for modem binary path
+    symlink /dev/block/mmcblk0p12 /dev/mbin0
+
     # Assign TCP buffer thresholds to be ceiling value of technology maximums
     # Increased technology maximums should be reflected here.
     write /proc/sys/net/core/rmem_default 1048576
