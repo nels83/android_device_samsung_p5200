@@ -22,6 +22,7 @@ import android.content.Context;
 import android.telephony.Rlog;
 import android.os.Message;
 import android.os.Parcel;
+import android.os.SystemProperties;
 import android.telephony.PhoneNumberUtils;
 
 import com.android.internal.telephony.uicc.IccCardApplicationStatus;
@@ -48,6 +49,7 @@ public class Santos10RIL extends RIL {
     public Santos10RIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
         super(context, preferredNetworkType, cdmaSubscription, instanceId);
+        mQANElements = SystemProperties.getInt("ro.ril.qanelements", 4);
     }
 
     //***** CommandsInterface implementation
